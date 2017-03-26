@@ -32,7 +32,6 @@ func Downloader(w http.ResponseWriter, r *http.Request) {
 			if err == nil {
 				if path != "" {
 					var buf bytes.Buffer
-					w.Header().Set("Content-Type", "text/csv")
 					w.Header().Set("Content-Disposition", fmt.Sprintf("attachment;filename=%s", fileName))
 					file, err := os.Open(path)
 					defer file.Close()
