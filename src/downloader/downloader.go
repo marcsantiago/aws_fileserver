@@ -16,8 +16,8 @@ import (
 
 var (
 	parentPath string
-	bucket     = "pubgears-test"
-	region     = "us-east-1"
+	bucket     = ""          //  ADD BUCKET NAME HERE
+	region     = "us-east-1" // CHANGE REGION HERE
 	svc        *s3.S3
 	wg         sync.WaitGroup
 	d          *s3manager.Downloader
